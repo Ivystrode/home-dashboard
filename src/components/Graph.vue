@@ -1,8 +1,8 @@
 <template>
-<h1>{{title}}</h1>
-  <p>{{chartData}}</p>
-  <Line :chart-data="chartData" :chart-options="chartOptions" />
-  <!-- <v-card color="grey-darken-2">uuuuuuu</v-card> -->
+  <div class="chart-container text-center">
+    <h1>{{title}}</h1>
+    <Line :chart-data="chartData" :chart-options="chartOptions" />
+  </div>
 </template>
 
 <script>
@@ -30,14 +30,14 @@ ChartJS.register(
 );
 
 export default {
-  name: 'BarChart',
+  name: 'Graph',
   components: { Line },
   props: {
     title: String,
     chartData: {
         type: Object,
         required: true,
-        responsive: true
+        // responsive: true
       },
     chartOptions: {
       type: Object,
@@ -51,3 +51,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.chart-container {
+  width: 60vh;
+  height: 60vh;
+}
+</style>

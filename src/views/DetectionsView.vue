@@ -1,6 +1,8 @@
 <template>
-    <h1>DETECTIONS VIEW</h1>
-    <CamDetections :camDetections="camDetections"/>
+    <div class="main-container flex flex-row flex-wrap flex-grow mt-2 justify-center">
+      <CamDetections :camDetections="camDetections"/>
+    </div>
+    
 </template>
 
 <script>
@@ -38,3 +40,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+body {
+  text-align: center;
+}
+</style>

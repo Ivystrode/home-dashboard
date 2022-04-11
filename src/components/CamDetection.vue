@@ -1,6 +1,6 @@
 <template>
-        <div class="flex justify-center">
-        <div class="rounded-lg shadow-lg bg-white max-w-sm">
+        <div class="flex">
+        <div id="detection-card" class="rounded-lg shadow-lg bg-white max-w-sm border-black">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
             <img class="rounded-t-lg" :src="camDetection.image" alt=""/>
             </a>
@@ -30,3 +30,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+/* #detection-card {
+    border: 50px;
+    border-color: steelblue;
+} */
+</style>

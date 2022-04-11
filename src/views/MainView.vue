@@ -1,8 +1,8 @@
 <template>
-  <h3>MainView</h3>
-  <BarChart title="Temperature chart" :chartData="this.tempData" />
-  <BarChart title="CO2 Levels" :chartData="this.co2Data" />
-
+<div class="main-container flex flex-row flex-wrap flex-grow mt-2 justify-center">
+  <Graph title="Temperature chart" :chartData="this.tempData" />
+  <Graph title="CO2 Levels" :chartData="this.co2Data" />
+</div>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ import { defineComponent } from 'vue';
 
 // Components
 // import HomePage from '../components/HomePage.vue'
-import BarChart from '../components/Graph.vue'
+import Graph from '../components/Graph.vue'
 
 
 
@@ -18,7 +18,7 @@ export default defineComponent({
   name: 'MainView',
 
   components: {
-    BarChart
+    Graph
   },
   data() {
     return {
@@ -46,6 +46,8 @@ export default defineComponent({
       labels: data.temperature.time,
       datasets: [{
         label: "Temperature (C)",
+        backgroundColor: '#E5747C',
+        borderColor: '#E5747C',
         data:data.temperature.level
       }]
     }
@@ -53,6 +55,8 @@ export default defineComponent({
       labels: data.CO2.time,
       datasets: [{
         label: "CO2 Level (PPM)",
+        backgroundColor: '#91E0D5',
+        borderColor: '#91E0D5',
         data:data.CO2.level
       }]
     }
@@ -66,3 +70,9 @@ export default defineComponent({
   }
 });
 </script>
+
+<style scoped>
+body {
+  text-align: center;
+}
+</style>
