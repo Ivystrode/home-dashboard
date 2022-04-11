@@ -27,3 +27,9 @@ export default {
   }),
 }
 </script>
+
+<style>
+head {
+  background-color: blue;
+}
+</style>

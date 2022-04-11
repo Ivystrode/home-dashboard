@@ -72,7 +72,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-body {
+.main-container {
   text-align: center;
+  margin-bottom: 10vh;
 }
 </style>

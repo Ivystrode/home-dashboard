@@ -11,14 +11,12 @@
 </template>
 
 <style scoped>
-    .footer-main {
-        margin-top: 20vh;
-    }
     a {
         color: #333;
     }
     footer {
-        margin-top: 30px;
+        /* margin-top: 20vh; */
         text-align: center;
+        background-color: gray;
     }
 </style>

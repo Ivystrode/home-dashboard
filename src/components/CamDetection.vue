@@ -1,5 +1,5 @@
 <template>
-        <div class="flex">
+        <div id="borderbox" class="flex">
         <div id="detection-card" class="rounded-lg shadow-lg bg-white max-w-sm border-black">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
             <img class="rounded-t-lg" :src="camDetection.image" alt=""/>
@@ -32,8 +32,10 @@ export default {
 </script>
 
 <style scoped>
-/* #detection-card {
-    border: 50px;
-    border-color: steelblue;
-} */
+#borderbox {
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 3%;
+
+}
 </style>

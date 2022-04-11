@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { Line, Bar } from "vue-chartjs";
+import { Line } from "vue-chartjs";
 import {
   Chart as ChartJS,
   Title,
@@ -16,7 +16,6 @@ import {
   LinearScale,
   PointElement,
   CategoryScale,
-  Plugin,
 } from "chart.js";
 
 ChartJS.register(
@@ -37,7 +36,7 @@ export default {
     chartData: {
         type: Object,
         required: true,
-        // responsive: true
+        responsive: true
       },
     chartOptions: {
       type: Object,
@@ -56,5 +55,8 @@ export default {
 .chart-container {
   width: 60vh;
   height: 60vh;
+}
+Line {
+  background-color: black;
 }
 </style>

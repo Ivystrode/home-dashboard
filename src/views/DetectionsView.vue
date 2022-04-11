@@ -42,7 +42,10 @@ export default {
 </script>
 
 <style scoped>
-body {
+.main-container {
   text-align: center;
+  padding-bottom: 10vh;
+  background-color: gray;
+  margin-top: 0px;
 }
 </style>

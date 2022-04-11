@@ -61,10 +61,10 @@
 </script>
 
 <style scoped>
-    header {
+    nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         }
 </style>
