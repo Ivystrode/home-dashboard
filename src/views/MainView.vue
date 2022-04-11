@@ -1,6 +1,7 @@
 <template>
   <h3>MainView</h3>
-  <BarChart :chartData="this.tempData" />
+  <BarChart title="Temperature chart" :chartData="this.tempData" />
+  <BarChart title="CO2 Levels" :chartData="this.co2Data" />
 
 </template>
 
@@ -22,13 +23,19 @@ export default defineComponent({
   data() {
     return {
       tempData: {
-        labels: ["1","2","3"],
-        datasets: [4,5,6]
-      },
-      co2Data:  {
-        labels: [1,2,3],
-        datasets: [4,5,6]
-      },
+      labels: [],
+      datasets: [{
+        label: String,
+        data: []
+      }]
+    },
+      co2Data: {
+      labels: [],
+      datasets: [{
+        label: String,
+        data: []
+      }]
+    }
     }
   },
   methods : {
@@ -37,11 +44,17 @@ export default defineComponent({
     const data = await res.json()
     this.tempData = {
       labels: data.temperature.time,
-      datasets: data.temperature.level
+      datasets: [{
+        label: "Temperature (C)",
+        data:data.temperature.level
+      }]
     }
     this.co2Data = {
       labels: data.CO2.time,
-      datasets: data.CO2.level
+      datasets: [{
+        label: "CO2 Level (PPM)",
+        data:data.CO2.level
+      }]
     }
     console.log(this.tempData)
     console.log(this.co2Data)

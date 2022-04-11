@@ -1,8 +1,8 @@
 <template>
-<h1>sss</h1>
-  <Bar :chart-data="chartData" :chart-options="chartOptions" />
+<h1>{{title}}</h1>
   <p>{{chartData}}</p>
-  <h1>www</h1>
+  <Line :chart-data="chartData" :chart-options="chartOptions" />
+  <!-- <v-card color="grey-darken-2">uuuuuuu</v-card> -->
 </template>
 
 <script>
@@ -33,9 +33,11 @@ export default {
   name: 'BarChart',
   components: { Line },
   props: {
+    title: String,
     chartData: {
         type: Object,
-        required: true
+        required: true,
+        responsive: true
       },
     chartOptions: {
       type: Object,
@@ -44,6 +46,8 @@ export default {
   },
   mounted() {
     console.log("mounted")
+    console.log(this.chartData)
+    console.log("endmounted")
   }
 }
 </script>
