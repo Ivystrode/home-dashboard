@@ -22,6 +22,7 @@ export default defineComponent({
   },
   data() {
     return {
+
       tempData: {
       labels: [],
       datasets: [{
@@ -29,6 +30,7 @@ export default defineComponent({
         data: []
       }]
     },
+    
       co2Data: {
       labels: [],
       datasets: [{
@@ -42,6 +44,8 @@ export default defineComponent({
   async getGraphData() {
     const res = await fetch("http://localhost:5000/graphs")
     const data = await res.json()
+
+    // Now do this dynamically ie for every graph in graphs add to data()
     this.tempData = {
       labels: data.temperature.time,
       datasets: [{
