@@ -24,3 +24,7 @@ pnpm-debug.log*
 
 # images
 *.jpg
+
+venv/
+__pycache__/
+*.json

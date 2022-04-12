@@ -42,8 +42,9 @@ export default defineComponent({
   },
   methods : {
   async getGraphData() {
-    const res = await fetch("http://localhost:5000/graphs")
-    const data = await res.json()
+    const res = await fetch("http://localhost:5000/get") // remove the /get for using json server and use /graphs instead
+    const received_data = await res.json()
+    const data = received_data[0]['graphs'] // remove for using json server
 
     // Now do this dynamically ie for every graph in graphs add to data()
     this.tempData = {
