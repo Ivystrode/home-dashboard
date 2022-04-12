@@ -42,6 +42,9 @@
                 <li class="nav-item px-2">
                     <router-link class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0" to="detections">Detections</router-link>
                 </li>
+                <li class="nav-item px-2">
+                    <router-link class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0" to="videofeeds">Cameras</router-link>
+                </li>
             </ul>
             <!-- Left links -->
         </div>
