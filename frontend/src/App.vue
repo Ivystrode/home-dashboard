@@ -1,11 +1,11 @@
 <template>
   <v-app>
     <v-main>
-      <!-- header -->
-      <Header title="Dashboard"/>
-      <router-view/>
-      <Footer/>
-      <!-- footer -->
+      <div class="main-container">
+        <Header title="Dashboard"/>
+        <router-view/>  
+      </div>
+        <Footer/>   
     </v-main>
   </v-app>
 </template>
@@ -29,7 +29,11 @@ export default {
 </script>
 
 <style>
-head {
-  background-color: blue;
+.main-container {
+  height: 100%;
+  min-height: 100%;
+  padding-bottom: 20vh;
+  /* background-color: #2e344d; */
+  background: linear-gradient(110deg, #2e344d, #071344);
 }
 </style>
