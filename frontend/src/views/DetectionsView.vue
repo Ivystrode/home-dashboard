@@ -16,11 +16,25 @@ export default {
     methods: {
     async fetchDetections() {
       console.log("Getting detections")
-      const res = await fetch("http://localhost:5000/get") // change to /detections for using json server
-      const data = await res.json()
-      console.log(data[0]['detections'])
 
-      return data[0]['detections']
+      // USING MONGO ATLAS
+      const res = await fetch("http://localhost:5000/get/detections") // change to /detections for using json server and /get for
+      const data = await res.json()
+      console.log(data)
+      return data
+      
+      // USING MONGO LOCAL
+      // const res = await fetch("http://localhost:5000/get") // change to /detections for using json server and /get for
+      // const data = await res.json()
+      // console.log(data[0]['detections'])
+      // return data[0]['detections']
+
+      // USING JSON SERVER (TESTING ENV ONLY)
+      // const res = await fetch("http://localhost:5000/detections") // change to /detections for using json server and /get for
+      // const data = await res.json()
+      // console.log(data)
+
+      return data
     },
     async fetchDetection(id) {
       // I THINK THIS IS NOT USED FOR ANYTHING NOW AND WON'T WORK WITH THIS RIGHT NOW ANYWAY...

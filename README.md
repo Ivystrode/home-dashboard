@@ -2,12 +2,12 @@
 
 ## Project setup
 
-### Frontend
+Frontend
 ```
 npm install
 ```
 
-### Backend
+Backend
 ```
 pip3 install -r requirements.txt
 ```
