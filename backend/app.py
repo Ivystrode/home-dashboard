@@ -20,7 +20,9 @@ connection_string = f'mongodb+srv://main:{db_pwd}@cluster0.4yhee.mongodb.net'
 client = MongoClient(connection_string, serverSelectionTimeoutMS=5000) 
 
 db = client['testdb']
-collection = db.testcol
+detections = db.detections
+temp = db.temperature_readings
+co2 = db.co2_readings
 
 
 # ==========FLASK API==========
@@ -34,8 +36,17 @@ app.config['CORS_HEADER'] = 'Content-Type: application/json'
 def hello():
     return "API is fucking working"
 
-@app.route("/get", methods=['GET'])
-def get_data():
+@app.route("/get/<requested_data>", methods=['GET'])
+def get_data(requested_data):
+    
+    # there must be a better way of doing this
+    if requested_data == "temp":
+        collection = temp
+    elif requested_data == "co2":
+        collection = co2
+    elif requested_data == "detections":
+        collection = detections
+        
     try:
         db_data = collection.find()
         print(db_data)
@@ -63,8 +74,17 @@ def get_data():
 #     except Exception as e:
 #         return e
     
-@app.route("/post", methods=['POST'])
-def post_data():
+@app.route("/post/<requested_data>", methods=['POST'])
+def post_data(requested_data):
+    
+    # there must be a better way of doing this
+    if requested_data == "temp":
+        collection = temp
+    elif requested_data == "co2":
+        collection = co2
+    elif requested_data == "detections":
+        collection = detections
+
     ins_data = request.get_json()
     
     try:
