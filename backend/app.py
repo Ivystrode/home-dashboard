@@ -6,6 +6,15 @@ import os, sys
 from dotenv import load_dotenv
 load_dotenv()
 
+"""
+API for getting and posting new data
+run with 
+app.run(debug=True, host='0.0.0.0', port=5000)
+And maybe this will make it work cross machine
+
+Though in practice this will just run on the pi
+"""
+
 # ==========MONGODB HOSTED ON LMT-DESKTOP-2==========
 # client = MongoClient('mongodb://127.0.0.1:27017') # set to env var for completion. currently running on secondary machine (LMT-Lap-3)
 # db = client['test']

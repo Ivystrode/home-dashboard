@@ -29,6 +29,6 @@ def add_single(collection, test):
 
 if __name__ == '__main__':
     # send_db_file(posturl) # SENT to atlas testdb testcol
-    get("detections")
+    get("cameras")
     # add_to_graph_data()
     # add_single("co2", {"time":"00:40", "level": 260})

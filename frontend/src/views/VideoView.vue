@@ -1,31 +1,43 @@
 <template>
     <div id="vid" class="main-container flex flex-row flex-grow justify-center m-2">
 
-      <!-- for camera in cameras - show each feed -->
-      <div class="camera-unit m-3">
-        <img class="vid" src="http://192.168.1.117:8081">
-        <div class="unit-details">
-          <p>Unit Name: HomeCam1</p>
-          <p>Unit Details: Something else</p>          
-        </div>
-      </div>
-
-      <div class="camera-unit m-3">
-        <img class="vid" src="http://192.168.1.117:8081">
-        <div class="unit-details">
-          <p>Unit Name: HomeCam1</p>
-          <p>Unit Details: Something else</p>          
-        </div>
-      </div>
+      <VideoFeeds :cameras="cameras" />
 
     </div>
       
 </template>
 
 <script>
-export default {
+import VideoFeeds from '../components/VideoFeeds.vue'
 
+export default {
+  name: "VideoView",
+  components: {
+    VideoFeeds
+  },
+  methods: {
+    async fetchCameras() {
+      console.log("getting cameras")
+      const res = await fetch("http://localhost:5000/get/cameras")
+      const data = await res.json()
+      console.log(data)
+      return data
+    },
+  },
+    data() {
+      return {
+        cameras: []
+      }
+    },
+    async created(){
+      console.log("video view")
+      this.cameras = await this.fetchCameras()
+      console.log(this.cameras)
+      console.log("end video fiew")
+    }
 }
+
+
 </script>
 
 <style scoped>
