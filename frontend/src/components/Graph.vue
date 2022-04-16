@@ -59,4 +59,7 @@ export default {
 Line {
   background-color: black;
 }
+h1 {
+  color: rgb(184, 177, 177);
+}
 </style>

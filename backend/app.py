@@ -23,6 +23,7 @@ db = client['testdb']
 detections = db.detections
 temp = db.temperature_readings
 co2 = db.co2_readings
+cameras = db.cameras
 
 
 # ==========FLASK API==========
@@ -46,6 +47,8 @@ def get_data(requested_data):
         collection = co2
     elif requested_data == "detections":
         collection = detections
+    elif requested_data == "cameras":
+        collection = cameras
         
     try:
         db_data = collection.find()
@@ -84,6 +87,8 @@ def post_data(requested_data):
         collection = co2
     elif requested_data == "detections":
         collection = detections
+    elif requested_data == "cameras":
+        collection = cameras
 
     ins_data = request.get_json()
     

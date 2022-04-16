@@ -17,7 +17,7 @@ def get(col):
     print(d)
     print(d.content)
 
-def add__multiple_to_collection():
+def add_multiple_to_collection():
     
     for entry in test_data:
         p = requests.post(posturl, json=entry)
