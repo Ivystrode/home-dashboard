@@ -4,7 +4,7 @@
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
             <img class="rounded-t-lg" :src="camDetection.image" alt=""/>
             </a>
-            <div class="p-6">
+            <div id="descbox" class="p-6">
             <h5 class="text-gray-900 text-xl font-medium mb-2">{{camDetection.type}}</h5>
             <p class="text-gray-700 text-base mb-4">
                 {{camDetection.detection_unit}}
@@ -37,7 +37,17 @@ export default {
     border-width: 5px;
     border-radius: 3%;
     height: 450px;
+    /* opacity: 50%; */
     /* min-height: 450px; */
 
 }
+
+#borderbox:hover {
+    scale: 102%;
+}
+
+#detection-card {
+    opacity: 100%;
+}
+
 </style>
