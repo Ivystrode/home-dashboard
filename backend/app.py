@@ -157,3 +157,4 @@ def post_data(requested_data):
 #     except Exception as e:
 #         return json.dumps(e)
         
+app.run(debug=True, host='0.0.0.0', port=5000)

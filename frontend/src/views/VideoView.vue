@@ -1,5 +1,6 @@
 <template>
-    <div id="vid" class="main-container flex flex-row flex-grow justify-center m-2">
+    <!-- <div id="vid" class="main-container flex flex-row flex-grow justify-center m-2"> -->
+    <div id="vid" class="video-container">
 
       <VideoFeeds :cameras="cameras" />
 
@@ -57,6 +58,10 @@ export default {
 
 .unit-details {
   color: rgb(252, 228, 193);
+}
+
+.video-container {
+  min-height: 100vh;
 }
 
 </style>
