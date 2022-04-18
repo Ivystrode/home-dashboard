@@ -1,15 +1,16 @@
 <template>
     <div id="borderbox" class="flex justify-center">
-        <div id="detection-card" class="rounded-lg shadow-lg bg-white max-w-sm">
+        <div id="detection-card" class="rounded-lg shadow-lg bg-slate-900 max-w-sm">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-            <img class="rounded-t-lg" :src="'http://' + camera.address + ':8080/?action=stream'" alt="No video feed detected"/>
+            <img class="rounded-t-lg text-gray-200" :src="'http://' + camera.address + ':8080/?action=stream'" alt="No video feed detected"/>
             </a>
             <div class="p-6">
-            <h5 class="text-gray-900 text-xl font-medium mb-2">{{camera.name}}</h5>
-            <p class="text-gray-700 text-base mb-4">
+            <h5 class="text-gray-200 text-xl font-medium mb-2">{{camera.name}}</h5>
+            <p class="text-gray-200 text-base mb-4">
                 {{camera.type}}
             </p>
-            <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Screenshot</button>
+            <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out ml-4">DETECT</button>
+            <button type="button" class=" inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out ml-28">REBOOT</button>
             </div>
         </div>
     </div>
@@ -44,6 +45,7 @@ export default {
     border-width: 5px;
     border-radius: 3%;
     height: 450px;
+    border-color: rgb(68, 122, 170);
     /* min-width: 380px; */
     /* min-height: 450px; */
 

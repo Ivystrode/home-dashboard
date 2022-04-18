@@ -34,7 +34,7 @@ export default {
       console.log("Getting detections")
 
       // USING MONGO ATLAS
-      const res = await fetch("http://localhost:5000/get/detections") // change to /detections for using json server and /get for
+      const res = await fetch("api/get/detections") // change to /detections for using json server and /get for
       const data = await res.json()
       console.log(data)
       this.loading = false

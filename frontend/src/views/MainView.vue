@@ -47,7 +47,7 @@ export default defineComponent({
 
     // Temperature
     console.log("get data")
-    const temp_res = await fetch("http://localhost:5000/get/temp")
+    const temp_res = await fetch("api/get/temp")
     const temp_data = await temp_res.json()
     console.log(temp_data)
 
@@ -61,7 +61,7 @@ export default defineComponent({
     console.log(temp_times)
 
     // CO2
-    const co2_res = await fetch("http://localhost:5000/get/co2")
+    const co2_res = await fetch("api/get/co2")
     const co2_data = await co2_res.json()
     console.log(co2_data)
     let co2_times = []

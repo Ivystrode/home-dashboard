@@ -19,7 +19,7 @@ export default {
   methods: {
     async fetchCameras() {
       console.log("getting cameras")
-      const res = await fetch("http://localhost:5000/get/cameras")
+      const res = await fetch("api/get/cameras")
       const data = await res.json()
       console.log(data)
       return data

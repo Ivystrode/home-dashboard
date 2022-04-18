@@ -1,6 +1,6 @@
 <template>
 <div class="flex flex-row flex-wrap flex-grow mt-2">
-    <div v-for="camera in cameras" :key="camera.id" class="flex flex-row flex-wrap flex-grow justify-center mt-2">
+    <div v-for="camera in cameras" :key="camera.id" class="flex flex-grow justify-center mt-2">
         <VideoFeed :camera="camera"/>
 
     </div>
