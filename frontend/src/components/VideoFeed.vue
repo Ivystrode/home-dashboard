@@ -2,7 +2,7 @@
     <div id="borderbox" class="flex justify-center">
         <div id="detection-card" class="rounded-lg shadow-lg bg-slate-900 max-w-sm">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-            <img class="rounded-t-lg text-gray-200" :src="'http://' + camera.address + ':8080/?action=stream'" alt="No video feed detected"/>
+            <img class="rounded-t-lg text-gray-200" :src="'http://' + camera.address + ':8080/?action=stream'" onerror="this.src='https://s3.envato.com/files/236638219/No%20signal%20590x332.jpg'" alt="No video feed detected"/>
             </a>
             <div class="p-6">
             <h5 class="text-gray-200 text-xl font-medium mb-2">{{camera.name}}</h5>
