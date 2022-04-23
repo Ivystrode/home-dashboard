@@ -5,20 +5,20 @@
     </div>
 
     <div v-if="toggleModal">
-      <ScreenshotModal @close-modal="closeModal" :modalData="modalData"/>
+      <CaptureModal @close-modal="closeModal" :modalData="modalData"/>
     </div>
       
 </template>
 
 <script>
 import VideoFeeds from '../components/VideoFeeds.vue'
-import ScreenshotModal from '../components/ScreenshotModal.vue'
+import CaptureModal from '../components/CaptureModal.vue'
 
 export default {
   name: "VideoView",
   components: {
     VideoFeeds,
-    ScreenshotModal
+    CaptureModal
   },
     data() {
       return {

@@ -32,7 +32,7 @@
 
 <script>
 export default {
-    name: 'ScreenshotModal',
+    name: 'CaptureModal',
     props: {
         modalData: Object
     },
@@ -49,6 +49,7 @@ export default {
     border-radius: 3%;
     border-color: rgb(68, 122, 170);
     max-width: 750px;
+    /* min-width: 95vw; */
     
 }
 </style>
