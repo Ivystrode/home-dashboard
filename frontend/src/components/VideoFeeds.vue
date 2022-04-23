@@ -1,7 +1,7 @@
 <template>
 <div class="flex flex-row flex-wrap flex-grow mt-2">
     <div v-for="camera in cameras" :key="camera.id" class="flex flex-grow justify-center mt-2">
-        <VideoFeed :camera="camera"/>
+        <VideoFeed :camera="camera" @open-modal="$emit('open-modal', camera.id)" />
 
     </div>
 </div>
@@ -19,6 +19,9 @@ export default {
     components: {
         VideoFeed
     },
+    emits: [
+        'open-modal'
+    ]
     // async mounted() {
 
     //   console.log("video feeds")
