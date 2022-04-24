@@ -16,9 +16,11 @@
 
                 <div class="items-center px-4 py-3">
 
-                    <button @click="$emit('close-modal')" id="ok-btn"
-                    class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out ml-4 mt-2">DOWNLOAD
-                    </button>
+                    <a id="ok-btn" 
+                    :href="'http://' + modalData[0].address + ':8080/?action=snapshot'" target="_blank"
+                    :download="'http://' + modalData[0].address + ':8080/?action=snapshot'" 
+                    class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mt-2">DOWNLOAD
+                    </a>
 
                     <button @click="$emit('close-modal')" id="ok-btn"
                     class=" inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out ml-4 mt-2">DISCARD
