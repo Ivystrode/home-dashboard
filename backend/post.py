@@ -1,5 +1,6 @@
 import json, requests
  
+ 
 global posturl
 posturl = "http://localhost:5000/post"
 
@@ -13,9 +14,10 @@ def send_db_file(posturl):
     print(p)
     
 def get(col):
-    d = requests.get(f"http://localhost:5000/get/{col}")
-    print(d)
-    print(d.content)
+    d = requests.get(f"http://192.168.1.84:5000/get/{col}")
+    # print(d)
+    # print(d.content)
+    return json.dumps(str(d))
 
 def add_multiple_to_collection():
     
@@ -29,6 +31,7 @@ def add_single(collection, test):
 
 if __name__ == '__main__':
     # send_db_file(posturl) # SENT to atlas testdb testcol
-    get("cameras")
+    response = get("temp")
+    print(response)
     # add_to_graph_data()
     # add_single("co2", {"time":"00:40", "level": 260})
